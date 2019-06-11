@@ -1,17 +1,11 @@
 <template>
     <div>
-        <b-btn>Add task</b-btn>
         <p>
-            <input type="text" placeholder="Enter your task here" v-model="task.name">
-        </p>
-        <p>
-            <textarea placeholder="Description for the task" v-model="task.desc"></textarea>
+            <input type="text" placeholder="Enter your task here" v-model="task.description">
         </p>
         <p>
             <button type="submit" class="btn btn-primary" @click="add">Add task</button>
         </p>
-        <p>{{ task.name }}</p>
-        <p>{{ task.desc }}</p>
     </div>
 </template>
 
@@ -25,8 +19,7 @@
         data() {
             return {
                 task: {
-                    name: '',
-                    desc: ''
+                    description: ''
                 }
             }
         },
