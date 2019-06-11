@@ -31,7 +31,11 @@ public class TaskService {
 
     public void completeTask(Long id) {
         Task task = repo.getOne(id);
-        task.setCompleted(true);
+        if (task.isCompleted()) {
+            task.setCompleted(false);
+        } else {
+            task.setCompleted(true);
+        }
         repo.save(task);
     }
 }
